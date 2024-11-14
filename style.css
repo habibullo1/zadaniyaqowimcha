@@ -1,0 +1,349 @@
+	:root{
+		--font1:'Montserrat';
+	}
+	body{background: #fff;}
+	body, div, h1, h2, h3, h4, h5, h6, p, input, button, textarea, li, td, th{
+		font-family: var(--font1);
+	}
+	body.disablescroll{overflow-y: hidden;}
+	.container{
+		width: 1340px;
+		margin: 0 auto 0 auto;
+	}
+
+*{
+	list-style: none;
+	text-decoration: none;
+}
+
+	header{
+		position: fixed;
+		width: 100%;
+		left: 0; top: 0;
+		z-index: 10;
+		padding: 40px 0;
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	header.fixed{
+		padding: 20px 0;
+		background: #fff;
+	}
+	a.logo{
+		float: left;
+	}
+	a.logo img{
+		float: left;
+		width: 240px; height: auto;
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	header.fixed a.logo img{
+		width: 200px; height: auto;
+	}
+	.headermenu{float: right;}
+	a.showmenu, a.hidemenu{
+		display: none;
+	}
+	nav{float: right;}
+	nav ul{float: left;}
+	nav ul li{
+		float: left;
+		margin-right: 82px;
+	}
+	nav ul li:last-of-type{
+		margin-right: 0;
+	}
+	nav ul li a{
+		float: left;
+		font-size: 15px;
+		color: #666;
+		padding: 8px 0;
+		border: 1px solid transparent;
+		text-transform: uppercase;
+	}
+	nav ul li.special a{
+		padding: 8px 20px;
+		border: 1px solid #000;
+	}
+
+
+
+
+	.banner{
+		padding: 240px 0 100px 0;
+	}
+	.banner .image{
+		float: left;
+		width: 45%;
+	}
+	.banner .image img{
+		float: left;
+		width: 100%; height: auto;
+		aspect-ratio: 3/4;
+		object-fit: cover; object-position: center;
+	}
+	.banner .text{
+		float: right;
+		width: 45%;
+	}
+	.banner .text h2{
+		text-align:left;
+		color:#000;
+		font-size:52px;
+		font-weight:600;
+		margin:0 0 30px 0;
+	}
+	.banner .text h3{
+		text-align:left;
+		color:#000;
+		font-size:42px;
+		font-weight:300;
+		margin:0 0 0 0;
+	}
+
+
+
+
+
+	.services{
+		padding: 100px 0;
+	}
+	.services h2{
+		text-align:center;
+		color:#000;
+		font-size:30px;
+		font-weight:300;
+		text-transform: uppercase;
+		letter-spacing: 7px;
+		margin:0 0 90px 0;
+	}
+	.services-items{
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		column-gap: 12%;
+	}
+	.services-items .item{
+		margin-bottom: 90px;
+	}
+	.services-items .item img{
+		float: left;
+		width: 100%; height: auto;
+		aspect-ratio: 1/1;
+		object-fit: cover; object-position: center;
+		filter: grayscale(100%);
+		transition:0.4s; -webkit-transition:0.4s;
+		margin-bottom: 40px;
+	}
+	.services-items .item:hover img{
+		filter: grayscale(0%);
+	}
+	.services-items .item h3{
+		text-align:center;
+		color:#000;
+		font-size:24px;
+		font-weight:300;
+		text-transform: uppercase;
+		margin:0 0 30px 0;
+	}
+	.services-items .item p{
+		text-align:center;
+		color:#666;
+		font-size:16px; line-height: 180%;
+		font-weight:300;
+		margin:0 0 0 0;
+	}
+
+
+
+
+
+	.gallery{
+		padding: 0 0 100px 0;
+	}
+	.gallery h2{
+		text-align:center;
+		color:#000;
+		font-size:30px;
+		font-weight:300;
+		text-transform: uppercase;
+		letter-spacing: 7px;
+		margin:0 0 90px 0;
+	}
+	.gallery-items{
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		column-gap: 12%;
+		row-gap: 100px;
+	}
+	.gallery-items .item{
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	.gallery-items .item .thumb{
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 30px;
+		position: relative;
+	}
+	.gallery-items .item .thumb img{
+		float: left;
+		width: 100%; height: auto;
+		aspect-ratio: 1/1;
+		object-fit: cover; object-position: center;
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	.gallery-items .item:hover .thumb img{
+		transform: scale(1.1);
+	}
+	.gallery-items .item .thumb a{
+		position: absolute;
+		width: 100%; height: 100%;
+		background: rgba(0,0,0,0.1);
+		z-index: 2;
+		transition:0.4s; -webkit-transition:0.4s;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+	}
+	.gallery-items .item .thumb a i{
+		font-size: 30px;
+		color: #fff;
+	}
+	.gallery-items .item .thumb a:hover{
+		opacity: 1;
+	}
+	.gallery-items .item h3{
+		text-align:center;
+		color:#000;
+		font-size:15px;
+		font-weight:300;
+		text-transform: uppercase;
+		position: relative;
+	}
+
+
+
+
+
+	.contact{
+		padding: 120px 0 170px 0;
+	}
+	.contact h2{
+		text-align:center;
+		color:#000;
+		font-size:30px;
+		font-weight:300;
+		text-transform: uppercase;
+		letter-spacing: 7px;
+		margin:0 0 120px 0;
+	}
+	.infoblocks{
+		display:grid;
+  		grid-template-columns:25% 25% 25%;
+  		column-gap: 12.5%;
+	}
+	.infoblocks .item{
+		text-align: center;
+		color: #000;
+	}
+	.infoblocks .item i{
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
+	.infoblocks .item h3{
+		text-align:center;
+		color:#000;
+		font-size:18px;
+		font-weight:300;
+		text-transform: uppercase;
+		margin:0 0 40px 0;
+		padding-bottom: 40px;
+		position: relative;
+	}
+	.infoblocks .item h3:after{
+		position:absolute;
+		width:40%; height:1px;
+		left:0; bottom:0; right: 0;
+		content:'';
+		z-index:1;
+		margin: 0 auto;
+		background: #eee;
+	}
+	.infoblocks .item p{
+		font-size:16px;
+		font-weight: 300;
+	}
+	.infoblocks .item p a{
+		color: #000;
+		border-bottom: 1px solid transparent;
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	.infoblocks .item p a:hover{
+		border-bottom:none;
+	}
+	.infoblocks .item p a:hover{
+		border-bottom: 1px solid #000;
+	}
+
+
+
+	.pic-block{
+		padding: 0 0 60px 0;
+	}
+	.pic-block img{
+		float: left;
+		width: 100%; height: auto;
+		aspect-ratio: 16/7;
+		object-fit: cover; object-position: center;
+	}
+
+
+
+	footer{
+		padding: 100px 0;
+	}
+	footer .copyright{
+		float: left;
+		text-align:left;
+		color:#000;
+		font-size:16px;
+		font-weight:300;
+		margin:0 0 0 0;
+	}
+	footer .copyright a{
+		color: #000;
+		border-bottom: 1px solid #000;
+	}
+	footer .social{
+		float: right;
+		text-align:left;
+		color:#000;
+		font-size:17px;
+		margin:0 0 0 0;
+	}
+	footer .social a{
+		float: left;
+		color: #000;
+		margin-right: 10px;
+		border-bottom: 1px solid transparent;
+		transition:0.4s; -webkit-transition:0.4s;
+	}
+	footer .social a:last-of-type{
+		margin-right: 0;
+	}
+	footer .social a:hover{
+		border-bottom: 1px solid #000;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	
